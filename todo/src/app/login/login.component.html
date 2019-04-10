@@ -1,0 +1,9 @@
+<!-- User Name: <input type="text" name="username" value="{{userName}}">
+Password : <input type="password" name="password" value="{{password}}"> -->
+<small *ngIf="invalidLogin">{{errorMessage}}</small>
+
+<div>
+User Name: <input type="text" name="username" [(ngModel)]="userName">
+Password : <input type="password" name="password" [(ngModel)]="password">
+<button (click)=handleLogin()>login</button>
+</div>
